@@ -1,16 +1,10 @@
-#ifndef _SEQLIST_H_
-#define _SEQLIST_H_
+#include<stdio.h>
+#include"SeqList.h"
 
-//抽象数据类型
-typedef int Data;
-
-typedef struct SeqList
+int main()
 {
-    Data *arr;
-    int capacity;
-    int size;    //有效元素的个数
-}SeqList;
+    SeqList* list = createSeqList();
 
-SeqList* CreateSeqList();
-
-#endif
+    
+    return 0;
+}
