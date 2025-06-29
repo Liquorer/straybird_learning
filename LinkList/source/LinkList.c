@@ -60,12 +60,37 @@ void insert_tail(Node* list,Data val)
 // 指定下标位置插入
 void insert_pos(Node* list,int pos,Data val)
 {
-
+    Node* newNode = createNode(val);
+    Node* tempNode = list;
+    for(int i = 1;i < pos && tempNode;i++)
+    {
+        tempNode = tempNode->next;
+    }
+    // 插入的时候，tempNode在插入位置的前面
+    newNode->next = tempNode->next;
+    tempNode->next = newNode;
 }
 // 指定元素(节点)位置插入（在指定元素之后）
 void insert_element(Node* list,Node* element,Data val)
 {
-
+    Node* newNode = createNode(val);
+    
+    newNode->next = element->next;
+    element->next = newNode;
+}
+// 依据val查找节点
+Node* findNode(Node* list,Data val)
+{
+    Node* tempNode = list->next;
+    while(tempNode)
+    {        
+        if(tempNode->data == val)
+        {
+            return tempNode;
+        }        
+        tempNode = tempNode->next;
+    }
+    return NULL;
 }
 // 从头到尾显示链表
 void show_list(Node* list)
@@ -74,7 +99,8 @@ void show_list(Node* list)
     while(tempNode->next)
     {
         tempNode = tempNode->next;
-        printf("%d\n",tempNode->data);
+        printf("%d ",tempNode->data);
     }
+    printf("\n");
 }
 

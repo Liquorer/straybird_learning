@@ -21,5 +21,8 @@ void insert_tail(Node* list,Data val);
 void insert_pos(Node* list,int pos,Data val);
 // 指定元素(节点)位置插入（在指定元素之后）
 void insert_element(Node* list,Node* element,Data val);
+
+// 依据val查找节点
+Node* findNode(Node* list,Data val);
 // 显示节点
 void show_list(Node* list);
