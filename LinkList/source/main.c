@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include"../header/LinkList.h"
+#include <stdio.h>
+#include "../header/LinkList.h"
 
 int main()
 {

@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include "../header/LinkList.h"
 #include <malloc.h>
@@ -22,10 +23,10 @@ Node* createList()
 // 创建节点,此处没有在头文件声明
 Node* creatNode(Data val)
 {
-    Node* newNode = (Node*)malloc(size(Node));
+    Node* newNode = (Node*)malloc(sizeof(Node));
     if(!newNode)
     {
-        printf(newNode create failed!/n);
+        printf("newNode create failed!/n");
         return NULL;
     }
     newNode->data = val;
@@ -76,3 +77,4 @@ void show_list(Node* list)
         printf("%d\n",tempNode->data);
     }
 }
+
