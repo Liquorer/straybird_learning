@@ -8,9 +8,9 @@
 Node* createList()
 {
     Node* head = (Node*)malloc(sizeof(Node));
-    if(!NULL)
+    if(!head)
     {
-        printf("head malloc failed!/n");
+        printf("head malloc failed!\n");
         return NULL;
     }
     // 初始化头节点，避免节点元素过多初始化不方便，可使用memset()
@@ -21,7 +21,7 @@ Node* createList()
 }
 
 // 创建节点,此处没有在头文件声明
-Node* creatNode(Data val)
+Node* createNode(Data val)
 {
     Node* newNode = (Node*)malloc(sizeof(Node));
     if(!newNode)
@@ -67,7 +67,7 @@ void insert_element(Node* list,Node* element,Data val)
 {
 
 }
-
+// 从头到尾显示链表
 void show_list(Node* list)
 {
     Node* tempNode = list;
