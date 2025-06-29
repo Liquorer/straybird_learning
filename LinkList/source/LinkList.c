@@ -70,7 +70,7 @@ void insert_pos(Node* list,int pos,Data val)
     newNode->next = tempNode->next;
     tempNode->next = newNode;
 }
-// 指定元素(节点)位置插入（在指定元素之后）
+// 在指定元素(节点)位置后面插入
 void insert_element(Node* list,Node* element,Data val)
 {
     Node* newNode = createNode(val);
